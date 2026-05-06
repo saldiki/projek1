@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MYTICBOOST.ID - joki rank mlbb Murah</title>
+    <link href=">https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: #2c3e50;
+            line-height: 1.6;
+        }
+
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+
+        /* Header */
+        header {
+            background: rgba(255,255,255,0.98);
+            backdrop-filter: blur(20px);
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+            padding: 1rem 0;
+        }
+
+        nav { 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+        }
+
+        .logo {
+            font-family: 'Orbitron', monospace;
+            font-size: 2.2rem;
+            font-weight: 900;
+            background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: #2c3e50;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+
+        .nav-links a:hover { color: #ff6b6b; }
+
+        /* Hero Banner */
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+                        url('https://images.unsplash.com/photo-1611747068072-175f8a9229fe?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            color: white;
+        }
+
+        .hero-content h1 {
+            font-family: 'Orbitron', monospace;
+            font-size: 4.5rem;
+            margin-bottom: 1rem;
+            text-shadow: 3px 3px 10px rgba(0,0,0,0.7);
+        }
+
+        .hero p { font-size: 1.5rem; margin-bottom: 2rem; }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .cta-primary {
+            background: linear-gradient(45deg, #ff6b6b, #ff8e8e);
+            color: white;
+            padding: 20px 40px;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.2rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .cta-primary:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(255,107,107,0.4);
+        }
+
+        /* Services */
+        .services {
+            padding: 100px 0;
+            background: white;
+        }
+
+        .section-title {
+            text-align: center;
+            font-family: 'Orbitron', monospace;
+            font-size: 3.2rem;
+            margin-bottom: 4rem;
+            background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2.5rem;
+        }
+
+        .service-card {
+            background: white;
+            border-radius: 25px;
+            padding: 2rem;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            transition: all 0.4s;
+            border-top: 5px solid #ff6b6b;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 30px 60px rgba(0,0,0,0.15);
+        }
+
+        .service-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 15px;
+            margin-bottom: 1.5rem;
+            transition: transform 0.3s;
+        }
+
+        .service-card:hover .service-image {
+            transform: scale(1.05);
+        }
+
+        .service-price {
+            font-size: 2.5rem;
+            font-weight: 800;
+            background: linear-gradient(45deg, #27ae60, #2ecc71);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 1rem;
+        }
+
+        .service-name {
+            font-size: 1.6rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: #2c3e50;
+        }
+
+        .features {
+            list-style: none;
+            margin-bottom: 2rem;
+        }
+
+        .features li {
+            padding: 0.5rem 0;
+            display: flex;
+            align-items: center;
+        }
+
+        .features li i {
+            color: #27ae60;
+            margin-right: 1rem;
+            font-size: 1.2rem;
+        }
+
+        .buy-btn {
+            width: 100%;
+            background: linear-gradient(45deg, #ff6b6b, #ff5252);
+            color: white;
+            border: none;
+            padding: 18px;
+            border-radius: 15px;
+            font-size: 1.2rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .buy-btn:hover {
+            transform: scale(1.02);
+            box-shadow: 0 10px 30px rgba(255,107,107,0.4);
+        }
+
+        /* WhatsApp */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(45deg, #25D366, #128C7E);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            box-shadow: 0 10px 30px rgba(37,211,102,0.4);
+            z-index: 1000;
+            animation: bounce 2s infinite;
+            text-decoration: none;
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+            40% { transform: translateY(-10px); }
+            60% { transform: translateY(-5px); }
+        }
+
+        /* Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 2000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.8);
+            backdrop-filter: blur(10px);
+        }
+
+        .modal-content {
+            background: white;
+            margin: 10% auto;
+            padding: 3rem;
+            border-radius: 25px;
+            width: 90%;
+            max-width: 550px;
+            text-align: center;
+            box-shadow: 0 25px 70px rgba(0,0,0,0.4);
+            animation: modalSlide 0.4s ease;
+            position: relative;
+        }
+
+        @keyframes modalSlide {
+            from { transform: translateY(-50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        .close {
+            position: absolute;
+            right: 20px;
+            top: 20px;
+            font-size: 2rem;
+            color: #999;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .close:hover { color: #ff6b6b; }
+
+        .success-icon {
+            font-size: 5rem;
+            color: #27ae60;
+            margin-bottom: 1rem;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 3rem; }
+            .cta-buttons { flex-direction: column; align-items: center; }
+            .services-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="container">
+            <div class="logo">MYTICBOOST<span style="color:#ff6b6b;">ID</span></div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Topup</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Banner -->
+    <section id="home" class="hero">
+        <div class="container">
+            <h1>🎮 JOKI RANK MURAH</h1>
+            <p>Mobile Legends • EPIC • LEGENDS • MYRIC • HONOR•<br>
+            <strong>Proses SESUAI  ORDER • Garansi 100% • Harga Termurah!</strong></p>
+            <div class="cta-buttons">
+                <a href="#services" class="cta-primary">
+                    <i class="fas fa-diamond"></i> MULAI JOKI
+                </a>
+                <a href="https://wa.me/6281234567890" class="cta-primary" target="_blank">
+                    <i class="fab fa-whatsapp"></i> ORDER VIA WA
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services" class="services">
+        <div class="container">
+            <h2 class="section-title">🔥 PILIH RANK JOKI KAMU</h2>
+            <div class="services-grid">
+                <!-- Mobile Legends -->
+                <div class="service-card">
+                    <c:\Users\Hendra\OneDrive\Dokumen\saldiki\codingan\mlbb.image.webp
+                         alt="Mobile Legends RANK" class="mlbb.image">
+                    <div class="service-price">Rp 5.000</div>
+                    <div class="service-name">Mobile Legends EPIC KE LEGEND</div>
+                    <ul class="features">
+                        <li><i class="fas fa-bolt"></i> Proses Instan </li>
+                        <li><i class="fas fa-globe"></i> All Server Indonesia</li>
+                        <li><i class="fas fa-shield-alt"></i> Aman 100% No Bug</li>
+                        <li><i class="fas fa-undo"></i> Garansi Uang Kembali</li>
+                    </ul>
+                    <button class="buy-btn" onclick="orderItem('Mobile Legends 257 Diamond - Rp15.000')">JOKI SEKARANG</button>
+                </div>
+
+                <!-- MOBILE LEGENS -->
+                <div class="service-card">
+                <c:\Users\Hendra\OneDrive\Dokumen\saldiki\codingan\mlbb.image.webp
+                    alt="Free Fire Diamond" class="mlbb.image">
+                    <div class="service-price">Rp 8.000</div>
+                    <div class="service-name">MYtIC 1 SAMPAI 15</div>
+                    <ul class="features">
+                        <li><i class="fas fa-key"></i> Proses Instan</li>
+                        <li><i class="fas fa-clock"></i> Garansi</li>
+                        <li><i class="fas fa-fire"></i> Anti tipu</li>
+                        <li><i class="fas fa-thumbs-up"></i> mabar juga bisa</li>
+                    </ul>
+                    <button class="buy-btn" onclick="orderItem('joki rank mytic 15-25 - Rp13.000')">JOKI SEKARANG</button>
+                </div>
+
+                <!-- MOBILE LEGENS-->
+                <div class="service-card">
+                    <c:\Users\Hendra\OneDrive\Dokumen\saldiki\codingan\mlbb.image.webp                    <div class="service-price">Rp 15.000</div>
+                    <div class="service-name">mytic 15-20 UC</div>
+                    <ul class="features">
+                        <li><i class="fas fa-globe-asia"></i> BISA REQ HERO</li>
+                        <li><i class="fas fa-bolt"></i> TERPERCAYA 100%</li>
+                        <li><i class="fas fa-lock"></i> Resmi Aman 100%</li>
+                    </ul>
+                    <button class="buy-btn" onclick="orderItem('PUBG 600 UC - Rp12.000')">JOKI SEKARANG</button>
+                </div>
+
+                <!-- Akun Mythic -->
+                <div class="service-card">
+                     <c:\Users\Hendra\OneDrive\Dokumen\saldiki\codingan\mlbb.image.webp
+                         alt="Akun Mythic ML" class="service-image">
+                    <div class="service-price">Rp 20.000</div>
+                    <div class="service-name">Akun ML Mythic Glory</div>
+                    <ul class="features">
+                        <li><i class="fas fa-crown"></i> Rank MYTIC HONOR 25/30</li>
+                        <li><i class="fas fa-gem"></i> REQ 5 HERO</li>
+                        <li><i class="fas fa-infinity"></i> REQ LANE </li>
+                        <li><i class="fas fa-users"></i> AMAN+</li>
+                    </ul>
+                    <button class="buy-btn" onclick="orderItem('Akun ML Mythic - 20.000')">JOKI SEKRANG</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WhatsApp -->
+    <a href="https://wa.me/6281234567890" class="whatsapp-float" target="_blank" title="Chat WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+        <span style="position:absolute; top:-50px; right:0; background:#25D366; padding:5px 10px; border-radius:10px; font-size:12px; white-space:nowrap;">Order Cepat</span>
+    </a>
+
+    <!-- Order Modal -->
+    <div id="orderModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <div class="success-icon">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            <h2 style="color:#27ae60; margin-bottom:1rem;">✅ ORDER DITERIMA!</h2>
+            <div id="orderDetail" style="background:#f8f9fa; padding:1.5rem; border-radius:15px; margin:1.5rem 0; font-size:1.2rem; font-weight:600;"></div>
+            <p><strong>Silahkan Chat WhatsApp untuk proses pembayaran!</strong></p>
+            <a href="https://wa.me/082293799642?text=Halo%20admin%20GamingHub!%0ASaya%20mau%20order:" 
+               target="_blank" class="cta-primary" style="padding:20px 50px; font-size:1.3rem; margin-top:1rem;">
+                <i class="fab fa-whatsapp"></i> ORDER VIA WHATSAPP
+            </a>
+        </div>
+    </div>
+
+    <script>
+        function orderItem(product) {
+            document.getElementById('orderDetail').innerHTML = 
+                `<strong>${product}</strong><br>
+                <small>Copy pesan ini untuk WA:</small><br>
+                <code>Halo admin! Mau order ${product}</code>`;
+            document.getElementById('orderModal').style.display = 'block';
+        }
+
+        function closeModal() {
+            document.getElementById('orderModal').style.display = 'none';
+        }
+
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        window.onclick = function(event) {
+            if (event.target.classList.contains('modal')) {
+                closeModal();
+            }
+        }
+    </script>
+</body>
+</html>
